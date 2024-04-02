@@ -11094,7 +11094,7 @@ class WAS_BLIP_Analyze_Image:
                 model = model.to(device)
 
             with torch.no_grad():
-                caption = model.generate(tensor, sample=False, num_beams=6, max_length=74, min_length=20)
+                caption = model.generate(tensor, sample=False, num_beams=36, max_length=74, min_length=20)
                 # nucleus sampling
                 #caption = model.generate(tensor, sample=True, top_p=0.9, max_length=75, min_length=10)
                 cstr(f"\033[33mBLIP Caption:\033[0m {caption[0]}").msg.print()
